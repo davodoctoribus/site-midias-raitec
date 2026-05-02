@@ -198,8 +198,10 @@ nav ul li a:hover {
 }
 
 
+
+
 .rodape{
-    background-color: #070B2B;
+    background-color: #05053f;
 }
 
 .rodape_caixa{
@@ -219,7 +221,7 @@ nav ul li a:hover {
 
 .rodape_logo img {
             height: 150px;
-            padding-left: 30px;
+            padding-left: 15px;
 }
 
 .rodape_texto p {

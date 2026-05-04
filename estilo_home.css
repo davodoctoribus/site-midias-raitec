@@ -7,6 +7,7 @@
 h1, h2 {
     font-family: 'Helios', 'Arial', sans-serif;
     font-weight: 700;
+    font-size: 32px;
 }
 
 h3, h4 {
@@ -17,6 +18,7 @@ h3, h4 {
 p, a, li, span {
     font-family: 'Cairo', sans-serif;
     font-weight: 400;
+    font-size: 18px;
 }
 
 .cabecalho {
@@ -27,6 +29,15 @@ p, a, li, span {
     background-color: #05053f;
     border-bottom: 1px solid #05053f;
     height: 122px;
+}
+
+/* --- ESTILOS DOS BOTÕES DO MENU --- */
+.btn-abrir-menu, .btn-fechar-menu {
+    display: none; /* Escondidos no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
 .logo img {
@@ -55,16 +66,28 @@ nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 122px); /* desconta a altura do cabeçalho */
+    height: auto;
+    /* calc(100vh - 122px); (desconta a altura do cabeçalho ) -> auto 
+    isso tava dando um espaço sem nada muito grande depois da img do grupo*/
     overflow: hidden;
 }
 
 .hero img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* 100% -> auto
+    agora a imagem do grupo n distorce no mobile*/
     object-fit: cover;
     object-position: center;
 }
@@ -143,9 +166,18 @@ nav ul li a:hover {
     50%  { opacity: 1; }
     100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
 }
+
+
+
+
+
+
+
+
+
 
 .noticias {
-    padding: 4rem 2rem;
+    padding: 90px 80px;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -163,10 +195,14 @@ nav ul li a:hover {
 
 .noticia-imagem img {
     width: 100%;
-    height: 250px;
+    height: auto;
+    /*250px -> auto*/
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: block;
 }
+
 
 .noticia-texto {
     flex: 1;
@@ -257,14 +293,81 @@ nav ul li a:hover {
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {
-    .row, .row.reverse {
+    .noticia-card {
         flex-direction: column;
         gap: 40px;
     }
     
-    nav ul {
-        display: none; /* aqui entraria um menu hambúrguer */
+
+    .cabecalho {
+        position: relative; /* Para garantir o alinhamento */
     }
+
+    /* Mostra o ícone de hambúrguer */
+    .btn-abrir-menu {
+        display: block;
+        font-size: 30px;
+        margin-right: 2rem;
+    }
+
+    /* Configuração da tela que cobre o site quando o menu abre */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido fora da tela */
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.2); /* Fundo claro sutil */
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: right 0.4s ease-in-out; /* Animação suave */
+    }
+
+    /* Classe ativada pelo JavaScript para mostrar o menu */
+    nav.ativo {
+        right: 0;
+    }
+
+    /* Alinha os itens do menu para a direita */
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Botão 'X' baseado no protótipo */
+    .btn-fechar-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #24284b; /* Azul ligeiramente mais claro para destacar */
+        width: 55px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    /* A caixa azul escura com os links */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px; /* Espaçamento entre os links */
+        background-color: #05053f; /* Azul escuro do seu tema */
+        padding: 40px 30px;
+        border-radius: 8px;
+        width: 260px;
+        box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ajuste da fonte dos links no mobile */
+    nav ul li a {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
 
     .noticia-texto h2 {
         font-size: 26px;

@@ -18,17 +18,33 @@
     <body>
         <header class="cabecalho">
             <div class="logo">
-                <img src="src/logo.png" alt="Logo RAITec">
+                <a href="home.html" >
+                    <img   src="src/logo.png" alt="Logo RAITec" >
+                </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">INÍCIO</a></li>
-                    <li><a href="#">NOTÍCIAS</a></li>
-                    <li><a href="#">PROJETOS</a></li>
-                    <li><a href="#">DTEC</a></li>
-                    <li><a href="#">SOBRE</a></li>
-                    <li><a href="#">LOGIN</a></li>
-                </ul>
+
+            <!--  Botão de abrir o menu (visível apenas no mobile) -->
+            <button class="btn-abrir-menu" id="btnAbrir">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Menu de Navegação -->
+            <nav id="menuMobile">
+                <div class="menu-container">
+                    <!--  Botão de fechar o menu ('X') -->
+                    <button class="btn-fechar-menu" id="btnFechar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    
+                    <ul>
+                        <li><a href="home.html">INÍCIO</a></li>
+                        <li><a href="#">NOTÍCIAS</a></li>
+                        <li><a href="projetos.html">PROJETOS</a></li>
+                        <li><a href="#">DTEC</a></li>
+                        <li><a href="#">SOBRE</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -50,7 +66,9 @@
             <div class="rodape_caixa"> 
                 <div class="rodape_info">
                     <div class="rodape_logo"> 
-                        <img src="src/logo2.png" alt="logo 2 do raitec">
+                        <a href="home.html" >
+                            <img src="src/logo2.png" alt="logo 2 do raitec">
+                        </a>
                     </div>
 
                     <div class="rodape_texto">
@@ -66,9 +84,25 @@
                 </div>
             </div>
         </footer>
+
+
+        <script>
+            const btnAbrir = document.getElementById('btnAbrir');
+            const btnFechar = document.getElementById('btnFechar');
+            const menuMobile = document.getElementById('menuMobile');
+
+            // Abre o menu
+            btnAbrir.addEventListener('click', () => {
+                menuMobile.classList.add('ativo');
+            });
+
+            // Fecha o menu
+            btnFechar.addEventListener('click', () => {
+                menuMobile.classList.remove('ativo');
+            });
+        </script>
     </body>
 </html>
-
 
 
 

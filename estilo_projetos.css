@@ -73,7 +73,91 @@ nav ul li a:hover {
 
 
 
+/* --- CONTEÚDO PRINCIPAL --- */
+.conteudo-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
+/* Seção Inovação */
+.secao-inovacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.inovacao-imagem {
+    flex: 1;
+}
+
+.inovacao-imagem img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.inovacao-texto {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.inovacao-texto h2 {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.inovacao-texto p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Seção Projetos e Integrantes */
+.secao-projetos, .secao-integrantes {
+    margin-bottom: 80px;
+}
+
+.secao-projetos h2, .secao-integrantes h2 {
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Altura padrão para as imagens dos cards */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
 
 
 

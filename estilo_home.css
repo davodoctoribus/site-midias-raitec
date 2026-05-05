@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Helios', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+p, a, li, span {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #05053f;
+    border-bottom: 1px solid #05053f;
+    height: 122px;
+}
+
+/* --- ESTILOS DOS BOTÕES DO MENU --- */
+.btn-abrir-menu, .btn-fechar-menu {
+    display: none; /* Escondidos no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    margin-left: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* calc(100vh - 122px); (desconta a altura do cabeçalho ) -> auto 
+    isso tava dando um espaço sem nada muito grande depois da img do grupo*/
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    /* 100% -> auto
+    agora a imagem do grupo n distorce no mobile*/
+    object-fit: cover;
+    object-position: center;
+}
+
+.scroll-indicador {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.scroll-indicador span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    animation: seta 1.2s infinite;
+}
+
+.scroll-indicador span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.scroll-indicador span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes seta {
+    0%   { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+    50%  { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
+}
+    object-fit: cover;
+    object-position: center;
+}
+
+.scroll-indicador {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.scroll-indicador span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    animation: seta 1.2s infinite;
+}
+
+.scroll-indicador span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.scroll-indicador span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes seta {
+    0%   { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+    50%  { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
+}
+
+
+
+
+
+
+
+
+
+
+.noticias {
+    padding: 90px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+    height: auto;
+}
+
+.noticia-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.noticia-imagem {
+    flex: 1;
+}
+
+.noticia-imagem img {
+    width: 100%;
+    height: auto;
+    /*250px -> auto*/
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+
+.noticia-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.noticia-texto h2 {
+    font-size: 28px;
+    color: #111;
+
+}
+
+.noticia-texto p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.noticia-texto a {
+    font-size: 18px;
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.noticia-texto a:hover {
+    color: #05053f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rodape{
+    background-color: #05053f;
+}
+
+.rodape_caixa{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0%;
+}
+
+.rodape_info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rodape_logo img {
+            height: 150px;
+            padding-left: 15px;
+}
+
+.rodape_texto p {
+    font-size: 14px;
+    color: #e5e7eb;
+    margin-bottom: 5px;
+        
+}
+
+.rodape_social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 100px;
+}
+
+.rodape_social a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.rodape_social a:hover {
+    background-color: #ccc;
+    color: #070B2B;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 900px) {
+    .noticia-card {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+
+    .cabecalho {
+        position: relative; /* Para garantir o alinhamento */
+    }
+
+    /* Mostra o ícone de hambúrguer */
+    .btn-abrir-menu {
+        display: block;
+        font-size: 30px;
+        margin-right: 2rem;
+    }
+
+    /* Configuração da tela que cobre o site quando o menu abre */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido fora da tela */
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.2); /* Fundo claro sutil */
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: right 0.4s ease-in-out; /* Animação suave */
+    }
+
+    /* Classe ativada pelo JavaScript para mostrar o menu */
+    nav.ativo {
+        right: 0;
+    }
+
+    /* Alinha os itens do menu para a direita */
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Botão 'X' */
+    .btn-fechar-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #24284b; /* Azul ligeiramente mais claro para destacar */
+        width: 55px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    /* A caixa azul escura com os links */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px; /* Espaçamento entre os links */
+        background-color: #05053f; /* Azul escuro do seu tema */
+        padding: 40px 30px;
+        border-radius: 8px;
+        width: 260px;
+        box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ajuste da fonte dos links no mobile */
+    nav ul li a {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+
+    
+    .noticia-texto h2 {
+        font-size: 26px;
+    }
+
+    .rodape_caixa {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rodape_esquerda {
+        flex-direction: column;
+    }
+}

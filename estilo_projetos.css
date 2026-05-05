@@ -217,12 +217,18 @@ nav ul li a:hover {
         
 }
 
+.rodape_texto a {
+    text-decoration: none;
+    color:#e5e7eb
+}
+
 .rodape_social {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-right: 100px;
 }
+
 
 .rodape_social a {
     text-decoration: none;
@@ -240,6 +246,13 @@ nav ul li a:hover {
     background-color: #ccc;
     color: #070B2B;
 }
+
+
+
+
+
+
+
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {

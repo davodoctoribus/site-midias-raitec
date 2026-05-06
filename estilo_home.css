@@ -230,6 +230,7 @@ nav ul li a:hover {
     color: #111;
     text-decoration: none;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .noticia-texto a:hover {
@@ -277,6 +278,10 @@ nav ul li a:hover {
     color: #e5e7eb;
     margin-bottom: 5px;
         
+}
+.rodape_texto a {
+    text-decoration: none;
+    color:#e5e7eb
 }
 
 .rodape_social {

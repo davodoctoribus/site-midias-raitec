@@ -209,13 +209,15 @@ nav ul li a:hover {
 
 
 .noticias {
-    padding: 90px 90px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     gap: 6rem;
     width: 100%;
     height: auto;
-   
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .noticia-card {
@@ -223,6 +225,14 @@ nav ul li a:hover {
     align-items: center;
     gap: 2rem;
 }
+
+.noticia-card-invertido {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row-reverse;
+}
+
 
 .noticia-imagem {
     flex: 1;
@@ -444,7 +454,14 @@ nav ul li a:hover {
     }
 
 
-    
+    .noticia-card-invertido {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+
+    }
+
     .noticia-texto h2 {
         font-size: 26px;
     }

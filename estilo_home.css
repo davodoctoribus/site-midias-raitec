@@ -27,6 +27,11 @@
   font-style: normal;
 }
 
+
+html {
+    scroll-behavior:smooth;
+}
+
 .titulo-noticia {
     font-family: "Track", sans-serif;
 }

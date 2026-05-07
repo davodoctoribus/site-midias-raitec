@@ -13,18 +13,18 @@
 
 /*fonte de subtítulo*/
 .maven-pro {
-  font-family: "Maven Pro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Maven Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*fonte de texto*/
 .dosis {
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -33,22 +33,22 @@ html {
 }
 
 .titulo-noticia {
-    font-family: "Track", sans-serif;
+    font-family: "Track", "Ubuntu", sans-serif;
 }
 
 h1, h2 {
-    font-family: 'Track';
+    font-family: 'Track', 'Ubuntu', sans-serif;
     font-weight: 700;
     font-size: 32px;
 }
 
 h3, h4 {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
 }
 
 p, a, li, span {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-weight: 400;
     font-size: 22px;
 }
@@ -115,7 +115,7 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     height: auto;
-    /* calc(100vh - 122px); (desconta a altura do cabeçalho ) -> auto 
+    /* calc(100vh - 122px); (desconta a altura do cabeçalho ) -> auto
     isso tava dando um espaço sem nada muito grande depois da img do grupo*/
     overflow: hidden;
 }
@@ -143,12 +143,16 @@ nav ul li a:hover {
 
 .scroll-indicador span {
     display: block;
-    width: 16px;
-    height: 16px;
-    border-right: 3px solid white;
-    border-bottom: 3px solid white;
+    width: 26px;
+    height: 26px;
+    border-right: 4px solid #09CCCC;
+    border-bottom: 4px solid #09CCCC;
     transform: rotate(45deg);
     animation: seta 1.2s infinite;
+    filter: drop-shadow(1px 0px 0px #05053f)
+    drop-shadow(-1px 0px 0px #05053f)
+    drop-shadow(0px 1px 0px #05053f)
+    drop-shadow(0px -1px 0px #05053f);
 }
 
 .scroll-indicador span:nth-child(2) {
@@ -160,48 +164,9 @@ nav ul li a:hover {
 }
 
 @keyframes seta {
-    0%   { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+    0%   { opacity: 0; transform: rotate(45deg) translate(-6px, -6px); }
     50%  { opacity: 1; }
-    100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
-}
-    object-fit: cover;
-    object-position: center;
-}
-
-.scroll-indicador {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-}
-
-.scroll-indicador span {
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-right: 3px solid white;
-    border-bottom: 3px solid white;
-    transform: rotate(45deg);
-    animation: seta 1.2s infinite;
-}
-
-.scroll-indicador span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.scroll-indicador span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-@keyframes seta {
-    0%   { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
-    50%  { opacity: 1; }
-    100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
+    100% { opacity: 0; transform: rotate(45deg) translate(6px, 6px); }
 }
 
 
@@ -256,8 +221,7 @@ nav ul li a:hover {
 
 #img_ps img {
     width: 100%;
-    height: 80%;
-    /*250px -> auto*/
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -328,8 +292,8 @@ nav ul li a:hover {
 }
 
 .rodape_logo img {
-            height: 150px;
-            padding-left: 15px;
+    height: 150px;
+    padding-left: 15px;
 }
 
 .rodape_texto {
@@ -340,7 +304,7 @@ nav ul li a:hover {
     font-size: 20px;
     color: #e5e7eb;
     margin-bottom: 5px;
-        
+
 }
 .rodape_texto a {
     text-decoration: none;
@@ -358,7 +322,7 @@ nav ul li a:hover {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -384,11 +348,15 @@ nav ul li a:hover {
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {
+    .scroll-indicador {
+        display: none;
+    }
+
     .noticia-card {
         flex-direction: column;
         gap: 40px;
     }
-    
+
 
     .cabecalho {
         position: relative; /* Para garantir o alinhamento */
@@ -460,10 +428,10 @@ nav ul li a:hover {
 
 
     .noticia-card-invertido {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
 
     }
 
@@ -473,11 +441,33 @@ nav ul li a:hover {
 
     .rodape_caixa {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 30px 20px;
+        gap: 24px;
+    }
+
+    .rodape_info {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .rodape_logo img {
+        height: 100px;
+        padding-left: 0;
+    }
+
+    .rodape_texto p {
+        font-size: 16px;
     }
 
     .rodape_social {
         padding-right: 0px;
+        justify-content: center;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 20px;
+        width: 100%;
     }
 
     .rodape_esquerda {

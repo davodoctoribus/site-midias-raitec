@@ -13,30 +13,29 @@
 
 /*fonte de subtítulo*/
 .maven-pro {
-  font-family: "Maven Pro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Maven Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*fonte de texto*/
 .dosis {
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .titulo-noticia {
-    font-family: "Track", sans-serif;
+    font-family: "Track", "Ubuntu", sans-serif;
 }
 
 h1, h2 {
-    font-family: 'Helios', 'Arial', sans-serif;
+    font-family: 'Track', 'Ubuntu', sans-serif;
     font-weight: 700;
     font-size: 32px;
 }
-
 
 h3, h4 {
     font-family: 'Ubuntu', sans-serif;
@@ -114,7 +113,7 @@ nav ul li a:hover {
     align-items: flex-start;
     gap: 50px;
     margin-bottom: 80px;
-    
+
 }
 
 .inovacao-imagem {
@@ -176,9 +175,8 @@ nav ul li a:hover {
 }
 
 .grid-cards {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     gap: 30px;
 }
 
@@ -251,8 +249,8 @@ nav ul li a:hover {
 }
 
 .rodape_logo img {
-            height: 150px;
-            padding-left: 15px;
+    height: 150px;
+    padding-left: 15px;
 }
 
 .rodape_texto {
@@ -263,7 +261,7 @@ nav ul li a:hover {
     font-size: 20px;
     color: #e5e7eb;
     margin-bottom: 5px;
-        
+
 }
 
 .rodape_texto a {
@@ -283,7 +281,7 @@ nav ul li a:hover {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -309,7 +307,7 @@ nav ul li a:hover {
         flex-direction: column;
         gap: 40px;
     }
-    
+
 
     .cabecalho {
         position: relative; /* Para garantir o alinhamento */
@@ -329,7 +327,7 @@ nav ul li a:hover {
         right: -100%; /* Começa escondido fora da tela */
         width: 100vw;
         height: 100vh;
-       
+
         z-index: 1000;
         display: flex;
         justify-content: flex-end;
@@ -382,13 +380,13 @@ nav ul li a:hover {
 
 
     .secao-inovacao {
-    flex-direction: column;
+        flex-direction: column;
 
     }
-    
+
 
     .grid-cards{
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 50px;
     }
 
@@ -402,11 +400,33 @@ nav ul li a:hover {
 
     .rodape_caixa {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 30px 20px;
+        gap: 24px;
+    }
+
+    .rodape_info {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .rodape_logo img {
+        height: 100px;
+        padding-left: 0;
+    }
+
+    .rodape_texto p {
+        font-size: 16px;
     }
 
     .rodape_social {
         padding-right: 0px;
+        justify-content: center;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 20px;
+        width: 100%;
     }
 
     .rodape_esquerda {

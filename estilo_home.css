@@ -4,22 +4,54 @@
     box-sizing: border-box;
 }
 
+
+/*fonte de título*/
+@font-face {
+    font-family: 'Track';
+    src: url(src/track-webfont/style.css) format('woff2');
+}
+
+/*fonte de subtítulo*/
+.maven-pro {
+  font-family: "Maven Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*fonte de texto*/
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titulo-noticia {
+    font-family: "Track", sans-serif;
+}
+
 h1, h2 {
-    font-family: 'Helios', 'Arial', sans-serif;
+    font-family: 'Track';
     font-weight: 700;
     font-size: 32px;
 }
 
 h3, h4 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
 }
 
 p, a, li, span {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 22px;
 }
+
+
+
+
+
 
 .cabecalho {
     display: flex;
@@ -183,6 +215,7 @@ nav ul li a:hover {
     gap: 6rem;
     width: 100%;
     height: auto;
+   
 }
 
 .noticia-card {
@@ -206,6 +239,17 @@ nav ul li a:hover {
 }
 
 
+#img_ps img {
+    width: 100%;
+    height: 80%;
+    /*250px -> auto*/
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+
 .noticia-texto {
     flex: 1;
     display: flex;
@@ -220,13 +264,13 @@ nav ul li a:hover {
 }
 
 .noticia-texto p {
-    font-size: 18px;
+    font-size: 22px;
     color: #555;
     line-height: 1.6;
 }
 
 .noticia-texto a {
-    font-size: 18px;
+    font-size: 22px;
     color: #111;
     text-decoration: none;
     font-weight: 500;
@@ -274,7 +318,7 @@ nav ul li a:hover {
 }
 
 .rodape_texto p {
-    font-size: 14px;
+    font-size: 20px;
     color: #e5e7eb;
     margin-bottom: 5px;
         
@@ -307,6 +351,17 @@ nav ul li a:hover {
     background-color: #ccc;
     color: #070B2B;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {

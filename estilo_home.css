@@ -317,6 +317,10 @@ nav ul li a:hover {
             padding-left: 15px;
 }
 
+.rodape_texto {
+    padding-right: 15px
+}
+
 .rodape_texto p {
     font-size: 20px;
     color: #e5e7eb;
@@ -389,7 +393,6 @@ nav ul li a:hover {
         right: -100%; /* Começa escondido fora da tela */
         width: 100vw;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.2); /* Fundo claro sutil */
         z-index: 1000;
         display: flex;
         justify-content: flex-end;
@@ -415,8 +418,8 @@ nav ul li a:hover {
         align-items: center;
         justify-content: center;
         background-color: #24284b; /* Azul ligeiramente mais claro para destacar */
-        width: 55px;
-        height: 55px;
+        width: 71px;
+        height: 71px;
         border-radius: 8px;
         font-size: 40px;
         margin-bottom: 15px;
@@ -449,6 +452,10 @@ nav ul li a:hover {
     .rodape_caixa {
         flex-direction: column;
         text-align: center;
+    }
+
+    .rodape_social {
+        padding-right: 0px;
     }
 
     .rodape_esquerda {

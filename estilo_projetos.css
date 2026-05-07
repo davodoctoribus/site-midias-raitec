@@ -185,6 +185,8 @@ nav ul li a:hover {
 .card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
 .card img {
@@ -251,6 +253,10 @@ nav ul li a:hover {
 .rodape_logo img {
             height: 150px;
             padding-left: 15px;
+}
+
+.rodape_texto {
+    padding-right: 15px
 }
 
 .rodape_texto p {
@@ -397,6 +403,10 @@ nav ul li a:hover {
     .rodape_caixa {
         flex-direction: column;
         text-align: center;
+    }
+
+    .rodape_social {
+        padding-right: 0px;
     }
 
     .rodape_esquerda {

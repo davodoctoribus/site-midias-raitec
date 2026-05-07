@@ -4,11 +4,39 @@
     box-sizing: border-box;
 }
 
+
+/*fonte de título*/
+@font-face {
+    font-family: 'Track';
+    src: url(src/track-webfont/style.css) format('woff2');
+}
+
+/*fonte de subtítulo*/
+.maven-pro {
+  font-family: "Maven Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*fonte de texto*/
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titulo-noticia {
+    font-family: "Track", sans-serif;
+}
+
 h1, h2 {
     font-family: 'Helios', 'Arial', sans-serif;
     font-weight: 700;
     font-size: 32px;
 }
+
 
 h3, h4 {
     font-family: 'Ubuntu', sans-serif;
@@ -112,8 +140,20 @@ nav ul li a:hover {
 .inovacao-texto p {
     color: #555;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 24px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -121,7 +161,9 @@ nav ul li a:hover {
 
 /* Seção Projetos e Integrantes */
 .secao-projetos, .secao-integrantes {
+    display: flex;
     margin-bottom: 80px;
+    flex-direction: column;
 }
 
 .secao-projetos h2, .secao-integrantes h2 {
@@ -134,14 +176,17 @@ nav ul li a:hover {
 }
 
 .grid-cards {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
+    
     gap: 30px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
 .card img {
@@ -153,13 +198,13 @@ nav ul li a:hover {
 }
 
 .card h3 {
-    font-size: 20px;
+    font-size: 26px;
     color: #000;
     margin-bottom: 5px;
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 22px;
     color: #666;
     line-height: 1.4;
 }
@@ -210,8 +255,12 @@ nav ul li a:hover {
             padding-left: 15px;
 }
 
+.rodape_texto {
+    padding-right: 15px
+}
+
 .rodape_texto p {
-    font-size: 14px;
+    font-size: 20px;
     color: #e5e7eb;
     margin-bottom: 5px;
         
@@ -280,7 +329,7 @@ nav ul li a:hover {
         right: -100%; /* Começa escondido fora da tela */
         width: 100vw;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.2); /* Fundo claro sutil */
+       
         z-index: 1000;
         display: flex;
         justify-content: flex-end;
@@ -306,8 +355,8 @@ nav ul li a:hover {
         align-items: center;
         justify-content: center;
         background-color: #24284b; /* Azul ligeiramente mais claro para destacar */
-        width: 55px;
-        height: 55px;
+        width: 71px;
+        height: 71px;
         border-radius: 8px;
         font-size: 40px;
         margin-bottom: 15px;
@@ -340,6 +389,7 @@ nav ul li a:hover {
 
     .grid-cards{
         flex-direction: column;
+        gap: 50px;
     }
 
     .card{
@@ -353,6 +403,10 @@ nav ul li a:hover {
     .rodape_caixa {
         flex-direction: column;
         text-align: center;
+    }
+
+    .rodape_social {
+        padding-right: 0px;
     }
 
     .rodape_esquerda {

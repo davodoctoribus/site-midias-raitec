@@ -33,6 +33,7 @@ Projeto desenvolvido por trainees no processo seletivo do **RAITEC** (Robótica,
 - Fontes: **Track** (local), **Cairo**, **Ubuntu** via Google Fonts
 - Ícones: Font Awesome 6
 - Responsivo a partir de `900px` com menu mobile animado
+- Encaminhar para o site do dtec no github pages.
 
 ---
 
@@ -53,3 +54,5 @@ Cor de destaque: `#09CCCC` — Ciano
 ## Como rodar
 
 Basta abrir `home.html` em qualquer navegador. Não há dependências externas além das fontes carregadas via CDN.
+
+Disponivel tambem no GitHub pages: https://davodoctoribus.github.io/site-midias-raitec/home.html
